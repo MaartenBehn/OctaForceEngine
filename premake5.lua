@@ -10,6 +10,12 @@ workspace "OctaForce"
 
 outputDir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "OctaForce/vendor/GLFW/include"
+
+include "OctaForce/vendor/GLFW"
+
 project "OctaForce"
 	location "OctaForce"
 	kind "SharedLib"
@@ -29,8 +35,15 @@ project "OctaForce"
 
 	includedirs
 	{
-		"OctaForce/vendor/spdlog/include",
-		"OctaForce/src"
+		"%{prj.name}/src",
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links 
+	{ 
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
@@ -41,7 +54,8 @@ project "OctaForce"
 		defines
 		{
 			"OC_PLATFORM_WINDOWS",
-			"OC_BUILD_DLL"
+			"OC_BUILD_DLL",
+			"OC_ENABLE_ASSERTS"
 		}
 
 		postbuildcommands
@@ -77,8 +91,8 @@ project "Sandbox"
 
 	includedirs
 	{
+		"OctaForce/src",
 		"OctaForce/vendor/spdlog/include",
-		"OctaForce/src"
 	}
 
 	filter "system:windows"

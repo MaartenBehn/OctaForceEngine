@@ -12,6 +12,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "OctaForce/Log.h"
+
 #ifdef OC_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif
