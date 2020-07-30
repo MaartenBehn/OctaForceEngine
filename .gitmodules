@@ -1,6 +1,3 @@
 [submodule "OctaForce/vendor/spdlog"]
 	path = OctaForce/vendor/spdlog
 	url = https://github.com/gabime/spdlog
-[submodule "OctaForceEngine/vendor/spdlog"]
-	path = OctaForceEngine/vendor/spdlog
-	url = https://github.com/gabime/spdlog

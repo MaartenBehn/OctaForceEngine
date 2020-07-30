@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="OctaForce">
+      <UniqueIdentifier>{DB2CD20A-4797-8681-90D5-3727FC7E64D6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OctaForce\Events">
+      <UniqueIdentifier>{5F74EFA2-4B6D-0EF5-749F-F37960F7ED00}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\OctaForce.h" />
+    <ClInclude Include="src\OctaForce\Application.h">
+      <Filter>OctaForce</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OctaForce\Core.h">
+      <Filter>OctaForce</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OctaForce\EntryPoint.h">
+      <Filter>OctaForce</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OctaForce\Events\ApplicationEvent.h">
+      <Filter>OctaForce\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OctaForce\Events\Event.h">
+      <Filter>OctaForce\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OctaForce\Events\KeyEvent.h">
+      <Filter>OctaForce\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OctaForce\Events\MouseEvent.h">
+      <Filter>OctaForce\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OctaForce\Log.h">
+      <Filter>OctaForce</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ocpch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\OctaForce\Application.cpp">
+      <Filter>OctaForce</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OctaForce\Log.cpp">
+      <Filter>OctaForce</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ocpch.cpp" />
+  </ItemGroup>
+</Project>

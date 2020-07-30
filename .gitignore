@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/vendor/bin/premake
+/bin-int/Debug-windows-x86_64
+/bin/Debug-windows-x86_64
+/.vs/OctaForce/v16
+/OctaForce.sln
