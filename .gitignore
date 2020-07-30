@@ -5,5 +5,5 @@
 **/bin-int
 **/bin
 **/.vs
-!vendor/bin/*
+!bin/premake/
 /OctaForce.sln
