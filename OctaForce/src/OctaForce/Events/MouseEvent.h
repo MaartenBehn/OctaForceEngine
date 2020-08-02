@@ -2,7 +2,7 @@
 
 #include "Event.h"
 
-namespace Hazel {
+namespace OctaForce {
 
 	class OC_API MouseMovedEvent : public Event
 	{
