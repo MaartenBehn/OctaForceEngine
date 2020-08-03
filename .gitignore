@@ -6,4 +6,8 @@
 **/bin
 **/.vs
 !bin/premake/
-/OctaForce.sln
+**.sln
+**.vcxproj
+**.vcxproj.user
+**.vcxproj.filters
+
