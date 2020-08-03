@@ -4,3 +4,6 @@
 [submodule "OctaForce/vendor/GLFW"]
 	path = OctaForce/vendor/GLFW
 	url = https://github.com/TheCherno/GLFW
+[submodule "OctaForce/Vendor/imgui"]
+	path = OctaForce/Vendor/imgui
+	url = https://github.com/TheCherno/imgui

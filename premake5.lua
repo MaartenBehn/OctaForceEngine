@@ -14,9 +14,11 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "OctaForce/vendor/GLFW/include"
 IncludeDir["Glad"] = "OctaForce/vendor/Glad/include"
+IncludeDir["ImGui"] = "OctaForce/vendor/imgui"
 
 include "OctaForce/vendor/GLFW"
 include "OctaForce/vendor/Glad"
+include "OctaForce/vendor/imgui"
 
 project "OctaForce"
 	location "OctaForce"
@@ -40,14 +42,17 @@ project "OctaForce"
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.Glad}"
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links 
 	{ 
 		"GLFW",
+		"opengl32.lib",
 		"Glad",
-		"opengl32.lib"
+		"ImGui"
+		
 	}
 
 	filter "system:windows"
