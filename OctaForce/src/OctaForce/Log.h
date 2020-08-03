@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Core.h"
+#include "OctaForce/Core.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/fmt/ostr.h"
 
@@ -29,7 +29,7 @@ namespace OctaForce
 
 // Client log macros
 #define OC_TRACE(...) ::OctaForce::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define OC_INFO(...) ::OctaForce::Log::GetClientogger()->info(__VA_ARGS__)
-#define OC_WARN(...) ::OctaForce::Log::GetClientogger()->warn(__VA_ARGS__)
+#define OC_INFO(...) ::OctaForce::Log::GetClientLogger()->info(__VA_ARGS__)
+#define OC_WARN(...) ::OctaForce::Log::GetClientLogger()->warn(__VA_ARGS__)
 #define OC_ERROR(...) ::OctaForce::Log::GetClientLogger()->error(__VA_ARGS__)
 #define OC_FATAL(...) ::OctaForce::Log::GetClientLogger()->fatal(__VA_ARGS__)

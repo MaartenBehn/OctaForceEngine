@@ -37,6 +37,12 @@
     <ClInclude Include="src\OctaForce\Events\MouseEvent.h">
       <Filter>OctaForce\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\OctaForce\Layer.h">
+      <Filter>OctaForce</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OctaForce\LayerStack.h">
+      <Filter>OctaForce</Filter>
+    </ClInclude>
     <ClInclude Include="src\OctaForce\Log.h">
       <Filter>OctaForce</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\OctaForce\Application.cpp">
+      <Filter>OctaForce</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OctaForce\Layer.cpp">
+      <Filter>OctaForce</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OctaForce\LayerStack.cpp">
       <Filter>OctaForce</Filter>
     </ClCompile>
     <ClCompile Include="src\OctaForce\Log.cpp">

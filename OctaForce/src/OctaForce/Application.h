@@ -1,10 +1,15 @@
 #pragma once
 
-#include "Core.h"
+#include "OctaForce/Core.h"
 #include "OctaForce/Events/Event.h"
 #include "OctaForce/Events/ApplicationEvent.h"
 
-#include "Window.h"
+#include "OctaForce/Window.h"
+#include "OctaForce/LayerStack.h"
+#include "OctaForce/Events/Event.h"
+#include "OctaForce/Events/ApplicationEvent.h"
+
+
 
 namespace OctaForce 
 {
@@ -19,11 +24,15 @@ namespace OctaForce
 		 
 		void OnEvent(Event& e);
 
+		void PushLayer(Layer* layer);
+		void PushOverlay(Layer* layer);
+
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
+		LayerStack m_LayerStack;
 	};
 
 	Application* CreateApplication();

@@ -13,8 +13,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "OctaForce/vendor/GLFW/include"
+IncludeDir["Glad"] = "OctaForce/vendor/Glad/include"
 
 include "OctaForce/vendor/GLFW"
+include "OctaForce/vendor/Glad"
 
 project "OctaForce"
 	location "OctaForce"
@@ -37,12 +39,14 @@ project "OctaForce"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links 
 	{ 
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -55,7 +59,7 @@ project "OctaForce"
 		{
 			"OC_PLATFORM_WINDOWS",
 			"OC_BUILD_DLL",
-			"OC_ENABLE_ASSERTS"
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
@@ -65,14 +69,17 @@ project "OctaForce"
 
 	filter "configurations:Debug"
 		defines "OC_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "OC_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "OC_DEBUG"
+		buildoptions "/MD"
 		optimize "On"
 
 project "Sandbox"
@@ -112,12 +119,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "OC_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "OC_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "OC_DEBUG"
+		buildoptions "/MD"
 		optimize "On"
